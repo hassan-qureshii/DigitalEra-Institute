@@ -32,17 +32,14 @@ const Contact = () => {
     },
   ];
 
-  // 👇 Scroll-to-top functionality
+  // Scroll to top button
   const [showButton, setShowButton] = useState(false);
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      setShowButton(window.scrollY > 300);
-    };
+    const handleScroll = () => setShowButton(window.scrollY > 300);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -66,7 +63,7 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        {/* Contact Info Cards */}
+        {/* Contact Cards */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -80,7 +77,9 @@ const Contact = () => {
               <div className="bg-[#0F75B9] p-3 rounded-full mr-4">
                 <FaHome className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl !font-semibold text-[#0F75B9] ">Visit Us</h3>
+              <h3 className="text-xl !font-semibold text-[#0F75B9]">
+                Visit Us
+              </h3>
             </div>
             <p className="text-black mb-4">
               Step into{" "}
@@ -101,7 +100,9 @@ const Contact = () => {
               <div className="bg-green-500 p-3 rounded-full mr-4">
                 <FaWhatsapp className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl !font-semibold !text-[#00C951]">WhatsApp Us</h3>
+              <h3 className="text-xl !font-semibold !text-[#00C951]">
+                WhatsApp Us
+              </h3>
             </div>
             <p className="text-black mb-4">
               Chat with us instantly on WhatsApp for quick support and guidance.
@@ -112,7 +113,7 @@ const Contact = () => {
               href="https://wa.me/923701393075"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-400 font-medium hover:underline"
+              className="text-green-400 font-medium hover:underline break-all"
             >
               +92 370 1393075
             </a>
@@ -121,7 +122,7 @@ const Contact = () => {
               href="https://wa.me/923355461282"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-400 font-medium hover:underline"
+              className="text-green-400 font-medium hover:underline break-all"
             >
               +92 335 5461282
             </a>
@@ -131,78 +132,84 @@ const Contact = () => {
           <div className="bg-[#ffff] backdrop-blur-lg border border-[#072340] p-6 rounded-2xl shadow-md hover:shadow-[#0F75B9] transition-all">
             <div className="flex items-center mb-4">
               <div className="bg-[#0F75B9] p-3 rounded-full mr-4">
-                <FaEnvelope className="w-6 h-6 text-white " />
+                <FaEnvelope className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-[#0f75b9] !font-bold">Email Us</h3>
+              <h3 className="text-xl font-semibold text-[#0F75B9] !font-bold">
+                Email Us
+              </h3>
             </div>
             <p className="text-black mb-4">
               Send us an email and we’ll get back within 24 hours. Whether you
               need details about our courses, upcoming batches, or personalized
               learning paths — we’re here to guide you toward your goals.
             </p>
-            <a
-              href="mailto:digitaleradeit@gmail.com"
-              className="text-[#0F75B9] font-medium hover:underline"
+            <button
+              onClick={() =>
+                (window.location.href = "mailto:digitaleradeit@gmail.com")
+              }
+              className="!text-[#0F75B9] font-medium hover:underline break-all text-left"
             >
               digitaleradeit@gmail.com
-            </a>
+            </button>
             <br />
-            <a
-              href="mailto:ranahaseeb5969@gmail.com"
-              className="text-[#0F75B9] font-medium hover:underline"
+            <button
+              onClick={() =>
+                (window.location.href = "mailto:ranahaseeb5969@gmail.com")
+              }
+              className="!text-[#0F75B9] font-medium hover:underline break-all text-left"
             >
               ranahaseeb5969@gmail.com
-            </a>
+            </button>
           </div>
         </motion.div>
 
-      {/* Location Section */}
-<section className="flex flex-col md:flex-row items-center justify-between gap-12 py-16 px-8 md:px-24 max-w-[1400px] mx-auto">
-  {/* Left Content */}
-  <motion.div
-    initial={{ x: -50, opacity: 0 }}
-    whileInView={{ x: 0, opacity: 1 }}
-    transition={{ duration: 0.8 }}
-    viewport={{ once: true }}
-    className="md:w-[50%] text-left space-y-6"
-  >
-    <h1 className="text-3xl md:text-4xl !font-extrabold text-[#0F75B9] tracking-wide">
-      Current Location
-    </h1>
-     <p className="text-gray-300 leading-relaxed text-sm">
-      Our institute is located in{" "}
-      <span className="text-[#0F75B9] font-semibold">
-        Rawalpindi, Pakistan
-      </span>
-      . This prime location allows us to engage with students, professionals, 
-      and organizations both locally and internationally. We welcome visitors, 
-      collaborators, and learners to connect with us—whether through online sessions 
-      or in-person visits at our campus.
-    </p>
-  </motion.div>
+        {/* Location Section */}
+        <section className="flex flex-col md:flex-row items-center justify-between gap-12 py-16 px-4 md:px-24 max-w-[1400px] mx-auto">
+          {/* Left */}
+          <motion.div
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="w-full md:w-[50%] text-left space-y-6"
+          >
+            <h1 className="text-3xl md:text-4xl !font-extrabold text-[#0F75B9] tracking-wide">
+              Current Location
+            </h1>
+            <p className="text-gray-300 leading-relaxed text-sm">
+              Our institute is located in{" "}
+              <span className="text-[#0F75B9] font-semibold">
+                Rawalpindi, Pakistan
+              </span>
+              . This prime location allows us to engage with students,
+              professionals, and organizations both locally and internationally.
+              We welcome visitors, collaborators, and learners to connect with
+              us—whether through online sessions or in-person visits at our
+              campus.
+            </p>
+          </motion.div>
 
-  {/* Right Map */}
-  <motion.div
-    initial={{ x: 50, opacity: 0 }}
-    whileInView={{ x: 0, opacity: 1 }}
-    transition={{ duration: 0.8 }}
-    viewport={{ once: true }}
-    className="md:w-[55%] rounded-2xl overflow-hidden shadow-2xl border border-white/10 relative"
-  >
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3323.071256681194!2d73.00271177569735!3d33.603455573329384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzPCsDM2JzEyLjQiTiA3M8KwMDAnMTkuMCJF!5e0!3m2!1sen!2s!4v1759765720399!5m2!1sen!2s"
-      width="100%"
-      height="350"
-      style={{ border: 0, minHeight: "300px", filter: "invert(0%)" }}
-      allowFullScreen=""
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-      title="Google Map"
-    ></iframe>
-  </motion.div>
-</section>
+          {/* Right (Map) */}
+          <motion.div
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="w-full md:w-[55%] rounded-2xl overflow-hidden shadow-2xl border border-white/10 relative"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3323.071256681194!2d73.00271177569735!3d33.603455573329384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzPCsDM2JzEyLjQiTiA3M8KwMDAnMTkuMCJF!5e0!3m2!1sen!2s!4v1759765720399!5m2!1sen!2s"
+              className="w-full h-[250px] md:h-[350px]"
+              style={{ border: 0, filter: "invert(0%)" }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Google Map"
+            ></iframe>
+          </motion.div>
+        </section>
 
-        {/* Fixed Vertical Social Icons */}
+        {/* Social Icons */}
         <div className="fixed top-1/2 right-0 transform -translate-y-1/2 px-3 py-4 rounded-l-2xl shadow-lg flex flex-col items-center space-y-5 z-50">
           {socialLinks.map((social, index) => (
             <a
@@ -218,7 +225,7 @@ const Contact = () => {
           ))}
         </div>
 
-        {/* 👇 Scroll to Top Button */}
+        {/* Scroll to top */}
         {showButton && (
           <button
             onClick={scrollToTop}
@@ -229,7 +236,7 @@ const Contact = () => {
           </button>
         )}
 
-        {/* CopyRight */}
+        {/* Footer */}
         <CopyRight />
       </div>
     </div>

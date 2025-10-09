@@ -37,7 +37,7 @@ const Header = () => {
         <motion.div
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="w-36"
+          className="md:w-36 w-28"
         >
           <Link to="/">
             <img

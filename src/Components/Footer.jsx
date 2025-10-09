@@ -72,7 +72,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Contact Info (Styled Like Quick Links) */}
+        {/* Contact Info */}
         <div className="lg:col-span-1 md:col-span-2">
           <h3 className='text-xl text-[#1177BB] !font-semibold !font-sans'>Contact</h3>
           <ul className="space-y-2 text-sm">
@@ -80,11 +80,17 @@ const Footer = () => {
               <Mail className="w-4 h-4 text-[#1174B6] transition-colors duration-200 group-hover:text-[#084282]" />
               <span>
                 Email:{" "}
-                <a href="mailto:digitaleradeit@gmail.com" className="hover:underline">
+                <a
+                  href="mailto:digitaleradeit@gmail.com"
+                  className="hover:underline relative z-10"
+                >
                   digitaleradeit@gmail.com
                 </a>{" "}
                 |{" "}
-                <a href="mailto:ranahaseeb5969@gmail.com" className="hover:underline">
+                <a
+                  href="mailto:ranahaseeb5969@gmail.com"
+                  className="hover:underline relative z-10"
+                >
                   ranahaseeb5969@gmail.com
                 </a>
               </span>
@@ -94,11 +100,17 @@ const Footer = () => {
               <Phone className="w-4 h-4 text-[#1174B6] transition-colors duration-200 group-hover:text-[#084282]" />
               <span>
                 Phone:{" "}
-                <a href="tel:03701393075" className="hover:underline">
+                <a
+                  href="tel:03701393075"
+                  className="hover:underline relative z-10"
+                >
                   0370-1393075
                 </a>{" "}
                 |{" "}
-                <a href="tel:03355461282" className="hover:underline">
+                <a
+                  href="tel:03355461282"
+                  className="hover:underline relative z-10"
+                >
                   0335-5461282
                 </a>
               </span>

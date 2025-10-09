@@ -17,7 +17,7 @@ const MoreInfo = () => {
 
   // WhatsApp function
   const openWhatsApp = (courseTitle) => {
-    const phoneNumber = "+923349313075";
+    const phoneNumber = "+923701393075";
     const message = `Hello! 👋 I am interested in enrolling in the "${courseTitle}" course. Could you please provide more details?`;
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
@@ -122,22 +122,19 @@ const MoreInfo = () => {
                 <p className="text-gray-300 text-xl md:text-sm leading-relaxed">
                   {course.desc}
                 </p>
-                <div className="flex items-center justify-between mt-6">
-                  <span className="text-[#0F75B9] font-semibold text-lg bg-[#112032] px-4 py-2 rounded-lg shadow-md">
+
+                {/* Fees + Button Section */}
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-6">
+                  <span className="text-[#0F75B9] font-semibold text-lg bg-[#112032] px-4 py-2 rounded-lg shadow-md w-fit">
                     {course.duration} / {course.fees}
                   </span>
-                   {/* WhatsApp Button */}
                   <button
-                  onClick={() => openWhatsApp(course.title)}
-                  className="mt-4 bg-[#21C063] hover:bg-[#1ebe5d] text-white px-6 py-3 rounded-lg font-semibold shadow-lg transition transform hover:scale-105"
-                >
-                  Take Admission Today
-                </button>
-                 
+                    onClick={() => openWhatsApp(course.title)}
+                    className="bg-[#21C063] hover:bg-[#1ebe5d] text-white px-6 py-3 rounded-lg font-semibold shadow-lg transition transform hover:scale-105 w-full sm:w-auto"
+                  >
+                    Take Admission Today
+                  </button>
                 </div>
-
-               
-                
               </div>
             </motion.div>
           ))}
@@ -160,3 +157,4 @@ const MoreInfo = () => {
 };
 
 export default MoreInfo;
+  

@@ -21,34 +21,34 @@ const Content = () => {
         className="w-full h-full"
       >
         {/* Slide 1 */}
-        <div className="relative w-full h-[400px] md:min-h-screen bg-black">
+        <div className="relative w-full h-[400px] md:min-h-screen ">
           <div
-            className="absolute inset-0 bg-center bg-contain bg-no-repeat"
+            className="absolute inset-0 bg-center bg-contain md:bg-cover bg-no-repeat"
             style={{ backgroundImage: `url(${Slide1})` }}
           />
-          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 " />
           <div className="absolute inset-0 flex items-center justify-center">
           </div>
         </div>
 
         {/* Slide 2 */}
-        <div className="relative w-full h-[400px] md:min-h-screen bg-black">
+        <div className="relative w-full h-[400px] md:min-h-screen ">
           <div
-            className="absolute inset-0 bg-center bg-contain bg-no-repeat"
+            className="absolute inset-0 bg-center bg-contain md:bg-cover bg-no-repeat"
             style={{ backgroundImage: `url(${Slide2})` }}
           />
-          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 " />
           <div className="absolute inset-0 flex items-center justify-center">
           </div>
         </div>
 
          {/* Slide 3 */}
-        <div className="relative w-full h-[400px] md:min-h-screen bg-black">
+        <div className="relative w-full h-[400px] md:min-h-screen ">
           <div
-            className="absolute inset-0 bg-center bg-contain bg-no-repeat"
+            className="absolute inset-0 bg-center bg-contain md:bg-cover bg-no-repeat"
             style={{ backgroundImage: `url(${Slide3})` }}
           />
-          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 " />
           <div className="absolute inset-0 flex items-center justify-center">
           </div>
         </div>
