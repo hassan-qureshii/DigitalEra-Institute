@@ -143,23 +143,19 @@ const Contact = () => {
               need details about our courses, upcoming batches, or personalized
               learning paths — we’re here to guide you toward your goals.
             </p>
-            <button
-              onClick={() =>
-                (window.location.href = "mailto:digitaleradeit@gmail.com")
-              }
-              className="!text-[#0F75B9] font-medium hover:underline break-all text-left"
-            >
-              digitaleradeit@gmail.com
-            </button>
-            <br />
-            <button
-              onClick={() =>
-                (window.location.href = "mailto:ranahaseeb5969@gmail.com")
-              }
-              className="!text-[#0F75B9] font-medium hover:underline break-all text-left"
-            >
-              ranahaseeb5969@gmail.com
-            </button>
+<a
+  href="mailto:digitaleradeit@gmail.com"
+  className="!text-[#0F75B9] font-medium hover:underline break-all text-left block"
+>
+  digitaleradeit@gmail.com
+</a>
+<a
+  href="mailto:ranahaseeb5969@gmail.com"
+  className="!text-[#0F75B9] font-medium hover:underline break-all text-left block"
+>
+  ranahaseeb5969@gmail.com
+</a>
+
           </div>
         </motion.div>
 
