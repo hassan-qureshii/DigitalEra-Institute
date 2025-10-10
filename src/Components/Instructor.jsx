@@ -8,10 +8,10 @@ import Amina from "../assets/Amina.png";
 import Osama from "../assets/Osama.png";
 
 const instructors = [
-  { id: 1, name: "Shafeeq", role: "IT Expert", img: Sir_shafeeq },
-  { id: 2, name: "Haseeb", role: "CEO of Digital Era", img: Haseeb },
-  { id: 3, name: "Amina Gulzaar", role: "Founder & MD Digital Era | Graphics Designer & Video Editor", img: Amina },
-  { id: 4, name: "Wasif", role: "SEO, WordPress & Ecommerce Expert", img: Sir_wasif },
+  { id: 1, name: "Haseeb", role: "CEO & Co-Founder of Digital Era | Marketing Specialist", img: Haseeb },
+  { id: 2, name: "Amina Gulzaar", role: "Founder & MD of Digital Era | Graphic Designer & Video Editor", img: Amina },
+  { id: 3, name: "Shafeeq", role: "IT Expert", img: Sir_shafeeq },
+  { id: 4, name: "Wasif", role: "SEO, WordPress & E-commerce Expert", img: Sir_wasif },
   { id: 5, name: "Osama", role: "Web Developer & Python Expert", img: Osama },
 ];
 
