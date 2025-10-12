@@ -55,22 +55,9 @@ const Content = () => {
           >
             {/* Background Image */}
             <div
-              className="absolute inset-0  bg-cover sm:bg-contain sm:bg-center md:bg-cover bg-no-repeat"
+              className="absolute inset-0  bg-cover bg-white/50 sm:bg-contain sm:bg-center md:bg-cover bg-no-repeat"
               style={{ backgroundImage: `url(${img})` }}
             />
-
-            {/* Optional: Dark gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
-
-            {/* Optional: If you want to place text or buttons on slides */}
-            {/* <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
-              <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4">
-                Welcome to Our Platform
-              </h1>
-              <p className="text-sm sm:text-base md:text-lg max-w-xl">
-                Learn, grow, and build your future with us.
-              </p>
-            </div> */}
           </div>
         ))}
       </Carousel>
