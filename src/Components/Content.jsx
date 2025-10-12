@@ -55,7 +55,7 @@ const Content = () => {
           >
             {/* Background Image */}
             <div
-              className="absolute inset-0 bg-center bg-contain md:bg-cover bg-no-repeat"
+              className="absolute inset-0  bg-cover sm:bg-contain sm:bg-center md:bg-cover bg-no-repeat"
               style={{ backgroundImage: `url(${img})` }}
             />
 
