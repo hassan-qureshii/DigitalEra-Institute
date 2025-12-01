@@ -10,12 +10,10 @@ import CopyRight from "./../Components/CopyRight";
 import { FaArrowUp } from "react-icons/fa";
 
 const MoreInfo = () => {
-  // Scroll to top function
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // WhatsApp function
   const openWhatsApp = (courseTitle) => {
     const phoneNumber = "+923701393075";
     const message = `Hello! 👋 I am interested in enrolling in the "${courseTitle}" course. Could you please provide more details?`;
@@ -71,7 +69,6 @@ const MoreInfo = () => {
   return (
     <div className="min-h-screen bg-[#0C0E15] text-white py-20 px-6 relative">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -91,7 +88,6 @@ const MoreInfo = () => {
           become job-ready, start freelancing, or launch your own business.
         </motion.p>
 
-        {/* Courses List */}
         <div className="space-y-24 my-12">
           {courses.map((course, index) => (
             <motion.div
@@ -104,7 +100,6 @@ const MoreInfo = () => {
                 index % 2 === 1 ? "md:flex-row-reverse" : ""
               }`}
             >
-              {/* Image */}
               <div className="md:w-1/2 relative group">
                 <motion.img
                   whileHover={{ scale: 1.05 }}
@@ -116,14 +111,12 @@ const MoreInfo = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#0F75B9]/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
 
-              {/* Text Content */}
               <div className="md:w-1/2 space-y-4">
                 <h3 className="text-3xl !font-bold text-[#0F75B9]">{course.title}</h3>
                 <p className="text-gray-300 text-xl md:text-sm leading-relaxed">
                   {course.desc}
                 </p>
 
-                {/* Fees + Button Section */}
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-6">
                   <span className="text-[#0F75B9] font-semibold text-lg bg-[#112032] px-4 py-2 rounded-lg shadow-md w-fit">
                     {course.duration} / {course.fees}
@@ -141,10 +134,8 @@ const MoreInfo = () => {
         </div>
       </div>
 
-      {/* CopyRight */}
       <CopyRight />
 
-      {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
         className="fixed right-6 bottom-6 bg-[#1378BB] hover:bg-[#084282] text-white p-3 rounded-full shadow-lg transition transform hover:scale-110 z-50"

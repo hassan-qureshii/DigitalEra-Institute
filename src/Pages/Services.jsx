@@ -35,7 +35,6 @@ const Services = () => {
     },
   ];
 
-  // Framer motion variants for staggered animation
   const containerVariants = {
     hidden: {},
     visible: {
@@ -53,7 +52,6 @@ const Services = () => {
 
   return (
     <div className="bg-[#0C0E15] min-h-screen flex flex-col items-center py-16 px-4">
-      {/* Animated Heading */}
       <motion.h1
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -74,7 +72,6 @@ const Services = () => {
         learning in the latest skills and technologies.
       </motion.p>
 
-      {/* Interactive Services Grid */}
       <motion.div
         className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl w-full mt-10"
         variants={containerVariants}
@@ -110,8 +107,6 @@ const Services = () => {
         ))}
       </motion.div>
 
-      {/* 👇 Scroll to Top Button */}
-
                 <button
                   onClick={scrollToTop}
                   className="fixed right-6 bottom-6 bg-[#1378BB] hover:bg-[#084282] text-white p-3 rounded-full shadow-lg transition transform hover:scale-110 z-50"
@@ -120,7 +115,6 @@ const Services = () => {
                   <FaArrowUp />
                 </button>
 
-      {/* Footer */}
       <div className="mt-20 w-full">
         <CopyRight />
       </div>
