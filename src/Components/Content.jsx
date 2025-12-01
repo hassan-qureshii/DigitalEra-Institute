@@ -58,17 +58,17 @@ const Content = () => {
         ))}
       </Carousel>
 
-      {/* 📚 Courses Section */}
+      {/* 📚 Courses */}
       <div className="mt-10 md:mt-16">
         <Courses />
       </div>
 
-      {/* 🪧 Banner Section */}
+      {/* 🪧 Banner */}
       <div className="mt-10 md:mt-20">
         <Banner />
       </div>
 
-      {/* 👨‍🏫 Instructor Section */}
+      {/* 👨‍🏫 Instructor */}
       <div className="mt-10 md:mt-20">
         <Instructor />
       </div>
