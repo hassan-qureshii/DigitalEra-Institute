@@ -18,22 +18,19 @@ import Footer from "./Footer";
 const Content = () => {
   const [isMobile, setIsMobile] = useState(false);
 
-  // 🧠 Detect screen width and set mobile or desktop mode
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 500);
     };
-    handleResize(); // Check once on component mount
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // 🖼️ Choose images based on screen size
   const slides = isMobile ? [PhoneSlide1] : [Slide1, Slide2, Slide3];
 
   return (
     <div className="w-screen bg-white">
-      {/* 🏞️ Hero Carousel */}
       <Carousel
         autoplay
         autoplaySpeed={3000}
@@ -53,7 +50,6 @@ const Content = () => {
               lg:min-h-screen /* Desktop screens */
             "
           >
-            {/* Background Image */}
             <div
               className="absolute inset-0  bg-cover bg-white/50 sm:bg-contain sm:bg-center md:bg-cover bg-no-repeat"
               style={{ backgroundImage: `url(${img})` }}

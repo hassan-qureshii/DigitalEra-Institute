@@ -7,7 +7,6 @@ const stats = [
   { number: 20, label: "Team Members", suffix: "+" },
 ];
 
-// ✅ Counter Component with scroll-triggered animation
 const Counter = ({ value, suffix }) => {
   const count = useMotionValue(0);
   const rounded = useTransform(count, (latest) => Math.floor(latest));
@@ -18,7 +17,7 @@ const Counter = ({ value, suffix }) => {
   useEffect(() => {
     if (isInView) {
       const controls = animate(count, value, {
-        duration: 4, // ⏳ Slower animation
+        duration: 4,
         ease: "easeOut",
       });
 
@@ -47,7 +46,6 @@ const Counter = ({ value, suffix }) => {
 const Banner = () => {
   return (
     <div className="w-full py-16">
-      {/* Heading */}
       <div className="flex items-center justify-center gap-6 mb-12">
         <span className="h-[2px] w-20 bg-gradient-to-r from-gray-500 to-gray-300"></span>
         <h1 className="text-[#072039] font-bold text-2xl md:text-3xl">
@@ -56,17 +54,14 @@ const Banner = () => {
         <span className="h-[2px] w-20 bg-gradient-to-r from-gray-500 to-gray-300"></span>
       </div>
 
-      {/* Stats Section Full Width */}
       <div className="w-full grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-center bg-gradient-to-r from-[#0a2f56] via-[#072039] to-[#0a2f56] py-12 px-4">
         {stats.map((item, index) => (
           <motion.div
             key={index}
             className="flex flex-col items-center justify-center p-6"
           >
-            {/* ✅ Animated Counter */}
             <Counter value={item.number} suffix={item.suffix} />
 
-            {/* Label */}
             <span className="text-gray-200 text-sm md:text-base mt-2 font-medium">
               {item.label}
             </span>
