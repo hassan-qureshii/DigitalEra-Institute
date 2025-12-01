@@ -45,7 +45,6 @@ const Courses = () => {
 
   return (
     <div className="w-full my-20 px-6">
-      {/* Section Heading */}
       <div className="w-72 mx-auto mb-8">
         <h1 className="text-3xl font-bold flex items-center justify-center gap-2 bg-black text-white px-6 py-2 rounded-b-4xl">
           <FaBookOpen className="text-white bg-[#023255] p-1 rounded-full" />
@@ -60,24 +59,20 @@ const Courses = () => {
 </p>
 
 
-      {/* Course Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
         {courses.map((course, index) => (
           <div
             key={index}
             className="relative group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 w-full h-[300px]"
           >
-            {/* Image */}
             <img
               src={course.image}
               alt={course.title}
               className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
             />
 
-            {/* Overlay */}
             <div className="absolute inset-0 bg-black/70 group-hover:bg-black/80 transition"></div>
 
-            {/* Content */}
             <div className="absolute bottom-15 left-0 right-0 text-center px-6">
               <h3 className="text-3xl !font-semibold !font-sans text-[#1176BB] mb-3">{course.title}</h3>
               <p className="text-gray-300  mb-4 text-xl md:text-sm ">{course.description}</p>

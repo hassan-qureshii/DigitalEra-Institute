@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Mission from "../assets/Mission.png";
 import Vision from "../assets/Vision.png";
 import CopyRight from "./../Components/CopyRight";
-import { FaEye, FaBullseye, FaArrowUp } from "react-icons/fa"; // ✅ Added FaArrowUp here
+import { FaEye, FaBullseye, FaArrowUp } from "react-icons/fa";
 
 const About = () => {
   const scrollToTop = () => {
@@ -41,12 +41,10 @@ const About = () => {
   return (
     <div className="w-full bg-[#0C0E15] min-h-screen text-white py-16 px-6 flex flex-col items-center justify-center">
       <div className="max-w-[1240px] w-full text-center flex flex-col items-center relative">
-        {/* --- Title --- */}
         <h1 className="text-3xl md:text-4xl font-bold border-b-4 border-[#1075BA] inline-block mb-12">
           Core Values ( ELITE )
         </h1>
 
-        {/* --- First Grid (3 items) --- */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 justify-center">
           {coreValues.slice(0, 3).map((item, index) => (
             <motion.div
@@ -71,7 +69,6 @@ const About = () => {
           ))}
         </div>
 
-        {/* --- Second Grid (Last 2 items) --- */}
         <div className="grid md:grid-cols-2 gap-8 mt-8 justify-center">
           {coreValues.slice(3).map((item, index) => (
             <motion.div
@@ -96,16 +93,13 @@ const About = () => {
           ))}
         </div>
 
-        {/* --- Vision & Mission Section --- */}
         <div className="mt-20 flex flex-col gap-16 w-full max-w-[1150px] mx-auto px-4">
-          {/* Vision Section */}
           <motion.div
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="flex flex-col md:flex-row items-center justify-between bg-[#FFFFFF] 
                        rounded-3xl p-8 shadow-lg hover:shadow-[#1174B6]/50 transition-all duration-400"
           >
-            {/* Image Left */}
             <motion.div
               whileHover={{ rotate: 1 }}
               className="md:w-1/2 flex justify-center mb-6 md:mb-0"
@@ -118,7 +112,6 @@ const About = () => {
               />
             </motion.div>
 
-            {/* Content Right */}
             <div className="md:w-1/2 text-center md:text-left px-4">
               <h2 className="flex items-center justify-center md:justify-start gap-3 text-4xl font-semibold text-[#1075BA] mb-4">
                 <FaEye className="text-[#1174B6] text-5xl" /> Vision
@@ -131,14 +124,12 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* Mission Section */}
           <motion.div
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="flex flex-col md:flex-row-reverse items-center justify-between bg-[#FFFFFF] 
                        rounded-3xl p-8 shadow-lg hover:shadow-[#1075BA]/60 transition-all duration-400"
           >
-            {/* Image Right */}
             <motion.div
               whileHover={{ rotate: -1 }}
               className="md:w-1/2 flex justify-center mb-6 md:mb-0"
@@ -151,7 +142,6 @@ const About = () => {
               />
             </motion.div>
 
-            {/* Content Left */}
             <div className="md:w-1/2 text-center md:text-left px-4">
               <h2 className="flex items-center justify-center md:justify-start gap-3 text-4xl font-semibold text-[#1075BA] mb-4">
                 <FaBullseye className="text-[#1174B6] text-5xl" /> Mission
@@ -166,7 +156,6 @@ const About = () => {
           </motion.div>
         </div>
 
-        {/* Scroll to Top Button */}
         <button
           onClick={scrollToTop}
           className="absolute right-6 bottom-0 bg-[#1378BB] hover:bg-[#084282] text-white p-3 rounded-full shadow-lg transition transform hover:scale-110"
@@ -175,7 +164,6 @@ const About = () => {
           <FaArrowUp />
         </button>
 
-        {/* --- CopyRight --- */}
         <CopyRight />
       </div>
     </div>

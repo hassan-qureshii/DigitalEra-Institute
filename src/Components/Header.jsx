@@ -16,7 +16,6 @@ const Header = () => {
   const [active, setActive] = useState('Home')
   const [menuOpen, setMenuOpen] = useState(false)
 
-  // Menu items with icons and routes
   const navItems = [
     { key: 'Home', label: 'Home', icon: <HomeOutlined />, path: '/' },
     { key: 'About', label: 'About', icon: <InfoCircleOutlined />, path: '/about' },
@@ -33,7 +32,6 @@ const Header = () => {
     >
       <div className="flex justify-between items-center h-full px-6 md:px-12">
 
-        {/* Logo */}
         <motion.div
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -48,7 +46,6 @@ const Header = () => {
           </Link>
         </motion.div>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex">
           <ul className="flex space-x-8 font-bold">
             {navItems.map((item, index) => (
@@ -86,7 +83,6 @@ const Header = () => {
           </ul>
         </div>
 
-        {/* Mobile Menu with Ant Design Dropdown */}
         <div className="md:hidden">
           <Dropdown
             menu={{

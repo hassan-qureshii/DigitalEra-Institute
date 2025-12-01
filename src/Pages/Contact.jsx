@@ -32,7 +32,6 @@ const Contact = () => {
     },
   ];
 
-  // Scroll to top button
   const [showButton, setShowButton] = useState(false);
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -47,7 +46,6 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-[#0C0E15] text-white py-20 px-6 relative">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -63,7 +61,6 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        {/* Contact Cards */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -71,7 +68,6 @@ const Contact = () => {
           viewport={{ once: true }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20"
         >
-          {/* Visit Us */}
           <div className="bg-[#ffff] backdrop-blur-lg border border-[#072340] p-6 rounded-2xl shadow-md hover:shadow-[#0F75B9] transition-all">
             <div className="flex items-center mb-4">
               <div className="bg-[#0F75B9] p-3 rounded-full mr-4">
@@ -94,7 +90,6 @@ const Contact = () => {
             </p>
           </div>
 
-          {/* WhatsApp Us */}
           <div className="bg-[#ffff] backdrop-blur-lg border border-[#072340] p-6 rounded-2xl shadow-md hover:shadow-green-400/40 transition-all">
             <div className="flex items-center mb-4">
               <div className="bg-green-500 p-3 rounded-full mr-4">
@@ -128,7 +123,6 @@ const Contact = () => {
             </a>
           </div>
 
-          {/* Email Us */}
           <div className="bg-[#ffff] backdrop-blur-lg border border-[#072340] p-6 rounded-2xl shadow-md hover:shadow-[#0F75B9] transition-all">
             <div className="flex items-center mb-4">
               <div className="bg-[#0F75B9] p-3 rounded-full mr-4">
@@ -159,7 +153,6 @@ const Contact = () => {
           </div>
         </motion.div>
 
-        {/* Location Section */}
         <section className="flex flex-col md:flex-row items-center justify-between gap-12 py-16 px-4 md:px-24 max-w-[1400px] mx-auto">
           {/* Left */}
           <motion.div
@@ -185,7 +178,6 @@ const Contact = () => {
             </p>
           </motion.div>
 
-          {/* Right (Map) */}
           <motion.div
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -205,7 +197,6 @@ const Contact = () => {
           </motion.div>
         </section>
 
-        {/* Social Icons */}
         <div className="fixed top-1/2 right-0 transform -translate-y-1/2 px-3 py-4 rounded-l-2xl shadow-lg flex flex-col items-center space-y-5 z-50">
           {socialLinks.map((social, index) => (
             <a
@@ -221,7 +212,6 @@ const Contact = () => {
           ))}
         </div>
 
-        {/* Scroll to top */}
         {showButton && (
           <button
             onClick={scrollToTop}
@@ -232,7 +222,6 @@ const Contact = () => {
           </button>
         )}
 
-        {/* Footer */}
         <CopyRight />
       </div>
     </div>

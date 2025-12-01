@@ -16,13 +16,11 @@ const instructors = [
 ];
 
 const Instructor = () => {
-  // Split into two groups (3 in first row, 2 in second)
   const firstRow = instructors.slice(0, 3);
   const secondRow = instructors.slice(3, 5);
 
   return (
     <div className="w-full my-12 px-6 text-center">
-      {/* Section Title */}
       <div className="w-fit mx-auto mb-8">
         <h1 className="text-3xl font-bold flex items-center justify-center gap-2 bg-black text-white px-4 py-2 rounded-b-3xl">
           <FaGraduationCap className="text-white bg-[#023255] p-1 rounded-full" />
@@ -30,7 +28,6 @@ const Instructor = () => {
         </h1>
       </div>
 
-      {/* First Row (3 Cards) */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-8">
         {firstRow.map((inst) => (
           <div
@@ -50,7 +47,6 @@ const Instructor = () => {
         ))}
       </div>
 
-      {/* Second Row (2 Cards, Centered) */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
         {secondRow.map((inst) => (
           <div

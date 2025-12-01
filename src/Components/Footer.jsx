@@ -43,10 +43,8 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#072039] text-gray-200 pt-12 pb-6 relative transition-all duration-300">
-      {/* Main Grid */}
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[25%_15%_35%_25%] gap-8 animate-fade-in">
 
-        {/* Brand / About Section */}
         <div className="group">
           <h1 className='text-2xl md:text-3xl text-[#1177BB] !font-semibold !font-sans'>Digital Era</h1>
           <p className="text-gray-400 text-sm mt-2 transition-colors duration-300 group-hover:text-gray-300">
@@ -54,7 +52,6 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Quick Links */}
         <div>
           <h3 className='text-xl text-[#1177BB] !font-semibold !font-sans'>Quick Links</h3>
           <ul className="space-y-2 text-sm">
@@ -72,7 +69,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Contact Info */}
         <div className="lg:col-span-1 md:col-span-2">
           <h3 className='text-xl text-[#1177BB] !font-semibold !font-sans'>Contact</h3>
           <ul className="space-y-2 text-sm">
@@ -123,7 +119,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Social Media */}
         <div>
           <h3 className='text-xl text-[#1177BB] !font-semibold !font-sans'>Follow Us</h3>
           <div className="flex space-x-4">
@@ -142,7 +137,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
         className="absolute right-6 bottom-6 bg-[#1378BB] hover:bg-[#084282] text-white p-3 rounded-full shadow-lg transition transform hover:scale-110"
@@ -151,7 +145,6 @@ const Footer = () => {
         <FaArrowUp />
       </button>
 
-      {/* CopyRight Section */}
       <CopyRight />
     </footer>
   );
